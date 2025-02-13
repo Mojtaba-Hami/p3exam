@@ -8,6 +8,7 @@ submitBtn.addEventListener("click" , checkInputs)
 function checkInputs(){
 
     inputs.forEach(isEmpty)
+    emailVaidate()
 
 }
 
@@ -17,5 +18,14 @@ function isEmpty(input){
 
     if(input.value == ""){
         erorP.textContent = "پر کردن فیلد ضروری است"
+    }
+}
+
+function emailVaidate(){
+        
+        const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        let checkResult = emailFormat.test(inputs[1].value)
+    if (!checkResult){
+        inputs[1].nextElementSibling.textContent = 'فرمت ایمیل وارد شده صحیح نمیباشد'
     }
 }
