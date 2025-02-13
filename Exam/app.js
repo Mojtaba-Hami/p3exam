@@ -3,8 +3,12 @@ let inputs = $.querySelectorAll(".input");
 let submitBtn = $.querySelector("button");
 let erorsP = $.querySelectorAll("p");
 let finalMessage = $.querySelector(".finalMessage");
+let form = $.querySelector(".inputs")
 
 submitBtn.addEventListener("click", checkInputs);
+form.addEventListener("submit",function(event){
+    event.preventDefault()
+})
 
 function checkInputs() {
     inputs.forEach(isEmpty);

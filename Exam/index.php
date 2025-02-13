@@ -11,7 +11,8 @@
     <div class="container">
         <h3>Login</h3>
 
-        <div class="inputs">
+        
+        <form action="" class="inputs">
         <input type="text" placeholder="Fullname" class="input">
         <p></p>
         <input type="text" placeholder="Email" class="input">
@@ -21,7 +22,8 @@
         <input type="text"placeholder="rewrite password" class="input">
         <p></p>
         <button>submit</button>
-        </div>
+        </form>
+        
 
     </div>
 
