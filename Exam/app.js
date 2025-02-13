@@ -9,6 +9,7 @@ function checkInputs(){
 
     inputs.forEach(isEmpty)
     emailVaidate()
+    checkpassword()
 
 }
 
@@ -22,10 +23,16 @@ function isEmpty(input){
 }
 
 function emailVaidate(){
-        
+
         const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         let checkResult = emailFormat.test(inputs[1].value)
     if (!checkResult){
         inputs[1].nextElementSibling.textContent = 'فرمت ایمیل وارد شده صحیح نمیباشد'
     }
+}
+//چک کردن یکسان بودن پسورد و تکرار پسورد
+function checkpassword(){
+    if (inputs[2].value !== inputs[3].value)
+        inputs[3].nextElementSibling.textContent = "مقدار وارد شده با پسورد بالایی مطابقت ندارد"
+
 }
